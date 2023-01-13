@@ -14,7 +14,7 @@ public class UserInput {
     }
 
     public static String userRestartInput() {
-        System.out.println(Messages.GAME_SECCESS);
+        System.out.println(Messages.GAME_SUCCESS);
         System.out.println(Messages.GAME_RESTART);
         String userRestartInput = new Scanner(System.in).next();
         validateUserRestartInput(userRestartInput);
@@ -29,7 +29,7 @@ public class UserInput {
     private static void validateUserInputFormat(String userNumberInput) {
         String format = "[1-9][1-9][1-9]";
         if (!userNumberInput.matches(format)) {
-            throw new IllegalArgumentException(Messages.ERROR_INPUT_FORMAT.toString());
+            throw new IllegalArgumentException(Messages.ERROR_NUMBER_FORMAT.toString());
         }
     }
 
@@ -47,7 +47,7 @@ public class UserInput {
     private static void validateUserRestartInput(String userRestartInput) {
         String format = "[YN]";
         if (!userRestartInput.matches(format)) {
-            throw new IllegalArgumentException(Messages.ERROR_INPUT_FORMAT.toString());
+            throw new IllegalArgumentException(Messages.ERROR_YN_FORMAT.toString());
         }
     }
 }
