@@ -1,7 +1,8 @@
-# Toy Project : 숫자 야구게임 개발 
+# 🌟 Toy Project : 숫자 야구게임 개발 
     우아한 테크코스 프리코스 미션 중 하나인, 숫자야구게임을 이용한 프로젝트를 실시한다.
-    해당 게임을 우선, 콘솔기반 게임으로 구성하며, 콘솔기반 게임으로 구현함에 있어,
-    적절한 리팩토링과 테스트 검증을 수행하기로 한다.
+    해당 게임을 우선, 콘솔기반 게임으로 구성하기로 한다.
+    먼저, 하나의 클래스로 모든 실행 흐름을 제어하도록 한다.
+    그 후, 기능, 응집도 관점에서 클래스의 분리를 고려하여 리팩토링 한다.
     
     이후, 웹기반 어플리케이션으로 적용하고, 기능을 추가하여, 온전한 웹어플리케이션 을 만들어보기로 한다.
 
@@ -9,7 +10,7 @@
 ---
 
 
-# 1. 기능 요구 사항
+# 🐋 1. 기능 요구 사항
     1~9까지 서로 다른 수로 이루어진 3자리 수를 맞추는 게임.
     컴퓨터는 랜덤한 서로다른 세자리 숫자를 생성하며, 이를 게임의 유저(클라이언트)가 맞추면 승리하며 게임은 종료된다.
     유저는 컴퓨터의 숫자를 추론한 3자리 서로다른 수를 제시하며, 컴퓨터는 유저가 입력한 숫자에 대한 힌트를 제공한다.
@@ -46,8 +47,8 @@
 ```
 ---
 
-# 2. 콘솔기반 게임 구현
-## 2.1 : God class (version 1) 
+# 🐋 2. 콘솔기반 게임 구현
+- ## 2.1 : God class (version 1) 
 Code Link : (https://github.com/Kwon-sang/toyProject/blob/master/src/main/java/v1/Application_v1.java)
 > - version1 에서는 우선 하나의 클래스에 모든 기능을 구현하는, 'God class anti-pattern' 방식으로 구현한다.<br/>
 > - 이러한 하나의 클래스에 모든 기능을 구현하는 것은 객체지향적 프로그래밍 보다는 오히려 절차지향적 프로그래밍에 가깝다.<br/>
@@ -55,7 +56,7 @@ Code Link : (https://github.com/Kwon-sang/toyProject/blob/master/src/main/java/v
 > - 기능이 추가됨에 따라 class 크기가 커질 경우, 문제는 더욱 복잡해진다.
 > - 피해야 할 Anti-Pattern 이지만, 이를 기반으로 코드의 리팩토링 과정과 관점을 적용 및 개선해 볼 수 있을 것이다. 
 
-## 2.3 : Refactoring (version 2)
+- ## 2.2 : Refactoring (version 2)
 Code Link : (https://github.com/Kwon-sang/toyProject/tree/master/src/main/java/v2)
 > ### 기능의 분리에 관하여
 > ㅇ
