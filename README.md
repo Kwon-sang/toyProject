@@ -54,3 +54,16 @@ Code Link : (https://github.com/Kwon-sang/toyProject/blob/master/src/main/java/v
 > - 로직을 구성하는 코드 전반에 대한 이해가 필요하게 되어, 이는 유지보수가 힘들어지며 또한 확장에 있어서 에러를 발생시킬 가능성이 높다.<br/>
 > - 기능이 추가됨에 따라 class 크기가 커질 경우, 문제는 더욱 복잡해진다.
 > - 피해야 할 Anti-Pattern 이지만, 이를 기반으로 코드의 리팩토링 과정과 관점을 적용 및 개선해 볼 수 있을 것이다. 
+
+## 2.3 : Refactoring (version 2)
+Code Link : (https://github.com/Kwon-sang/toyProject/tree/master/src/main/java/v2)
+> ### 기능의 분리에 관하여
+> ㅇ
+
+> ### 클래스의 분리
+> - `Application.java` : 메인 어플리케이션
+> - `Game.java` : 게임 실행 흐름 제어<br/><br/>
+> - `GameResult.java` : 유저가 입력한 숫자와 컴퓨터의 숫자 비교 연산을 수행(ex. 스트라이크 개수, 볼 갯수).<br/>
+> - `UserInput.java` : 유저의 콘솔 입력 기능을 담당
+> - `Utilities.java` : 기타 유틸리티 메서드를 보관(여기서는 3자리 랜덤 숫자 생성 메서드 포함)<br/><br/>
+> - `Messages` : 콘솔 출력 메시지 및 Error 메시지 관리를 위한 Enum

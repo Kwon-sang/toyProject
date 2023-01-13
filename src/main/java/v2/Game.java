@@ -5,6 +5,7 @@ public class Game {
     private String computerNumber;
 
     public void run() {
+        System.out.println(Messages.GAME_START);
         boolean keepGoing = true;
         while (keepGoing) {
             keepGoing = singleGame();
