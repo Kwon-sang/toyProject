@@ -77,3 +77,6 @@ Code Link : (https://github.com/Kwon-sang/toyProject/tree/master/src/main/java/v
 > - `UserInput.java` : 유저의 콘솔 입력 기능을 담당
 > - `Random.java` : 3자리 랜덤한 숫자 생성<br/><br/>
 > - `Messages` : 출력 메시지 관리를 위한 Enum
+
+> ### Reference Diagram 
+> <p align="center"><img src="src/main/resources/v2RefernceDiagram.png" width="600">
