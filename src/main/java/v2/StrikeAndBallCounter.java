@@ -37,6 +37,7 @@ public class StrikeAndBallCounter {
         }
     }
 
+    // 스트라이크 및 볼 개수에 대한 출력은, 해당 속성값을 지니고 있는 클래스에서 정의하는 것이 보다 높은 응집도를 가지는 설계일 것으로 판단하였다.
     public void printResult() {
         StringBuilder resultString = new StringBuilder();
         if (strikeCounts != 0) resultString.append(strikeCounts).append("스트라이크 ");

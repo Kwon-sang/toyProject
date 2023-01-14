@@ -59,12 +59,21 @@ Code Link : (https://github.com/Kwon-sang/toyProject/blob/master/src/main/java/v
 - ## 2.2 : Refactoring (version 2)
 Code Link : (https://github.com/Kwon-sang/toyProject/tree/master/src/main/java/v2)
 > ### 기능의 분리에 관하여
-> ㅇ
+> 숫자 야구 게임은 어떤 기능과 역할들로 구성되는가?<br/>
+> 확장성 및 유지보수를 위한 코드개선에 앞서, 먼저 단일 책임의 원칙(SRP)에 따라 어떤 책임과 기능들의 집합으로 이루어져 있는지 고민해 볼 수 있을 것이다.<br/>
+> 그리고 각 기능의 역할과 책임에 대하여, 응집도는 높으며 결합도가 낮은 코드가 될 수 있도록 변경할 수 있을 것이다.<br/>
+> 내가 생각하기에, 숫자야구게임의 주요 기능은 아래와 같다.
+> - 컴퓨터의 숫자를 생성하는 기능(1~9 범위의 랜덤한 3자리 숫자)
+> - 유저의 3자리 숫자 입력
+> - 컴퓨터와 유저의 숫자를 비교하여 스트라이크 or 볼 개수를 연산하는 기능
+> - 해당 결과를 출력하는 기능
+> 
+> version2 에서는 기능의 집합을 정의하고, 이를 토대로 응집도와 결합도 측면을 고려하여 클래스를 분리하였다.   
 
 > ### 클래스의 분리
 > - `Application.java` : 메인 어플리케이션
-> - `Game.java` : 게임 실행 흐름 제어<br/><br/>
-> - `GameResult.java` : 유저가 입력한 숫자와 컴퓨터의 숫자 비교 연산을 수행(ex. 스트라이크 개수, 볼 갯수).<br/>
+> - `Game.java` : 게임 실행 흐름 제어(게임 로직 컨트롤러 혹은 서비스)<br/><br/>
+> - `StrikeAndBallCounter.java` : 유저와 컴퓨터의 숫자를 기반으로, 스트라이크 개수와 볼 개수 속성값으로 저장<br/>
 > - `UserInput.java` : 유저의 콘솔 입력 기능을 담당
-> - `Utilities.java` : 기타 유틸리티 메서드를 보관(여기서는 3자리 랜덤 숫자 생성 메서드 포함)<br/><br/>
-> - `Messages` : 콘솔 출력 메시지 및 Error 메시지 관리를 위한 Enum
+> - `Random.java` : 3자리 랜덤한 숫자 생성<br/><br/>
+> - `Messages` : 출력 메시지 관리를 위한 Enum
