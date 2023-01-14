@@ -3,7 +3,10 @@ package v2;
 import java.util.Arrays;
 import java.util.List;
 
-public class GameResult {
+/**
+ * Based on Computer number and User Number, update fields of the number of 'Strike' and 'Ball' counts.
+ */
+public class StrikeAndBallCounter {
 
     private final String computerNumber;
     private final String userNumber;
@@ -11,20 +14,17 @@ public class GameResult {
     private int strikeCounts = 0;
     private int ballCounts = 0;
 
-    public GameResult(String computerNumber, String userNumber) {
+    public StrikeAndBallCounter(final String computerNumber, final String userNumber) {
         this.computerNumber = computerNumber;
         this.userNumber = userNumber;
-        processResult();
+        initCounts(computerNumber, userNumber);
     }
 
     public boolean isSuccessGame() {
-        if (strikeCounts == 3) {
-            return true;
-        }
-        return false;
+        return strikeCounts == 3;
     }
 
-    private void processResult() {
+    private void initCounts(final String computerNumber, final String userNumber) {
         List<String> computerNumbers = Arrays.asList(computerNumber.split(""));
         List<String> userNumbers = Arrays.asList(userNumber.split(""));
 
@@ -38,10 +38,10 @@ public class GameResult {
     }
 
     public void printResult() {
-        String resultString = "";
-        if (strikeCounts != 0) resultString += (strikeCounts + "스트라이크 ");
-        if (ballCounts != 0) resultString += (ballCounts + "볼");
-        if (strikeCounts + ballCounts == 0) resultString += "낫싱";
-        System.out.println(resultString);
+        StringBuilder resultString = new StringBuilder();
+        if (strikeCounts != 0) resultString.append(strikeCounts).append("스트라이크 ");
+        if (ballCounts != 0) resultString.append(ballCounts).append("볼");
+        if (strikeCounts + ballCounts == 0) resultString.append("낫싱");
+        System.out.println(resultString.toString());
     }
 }

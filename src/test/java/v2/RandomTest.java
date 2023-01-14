@@ -9,7 +9,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UtilitiesTest {
+class RandomTest {
 
     String randomThreeDigitNum;
 
@@ -17,7 +17,7 @@ class UtilitiesTest {
     @DisplayName("컴퓨터 번호생성 검증 - 1000회")
     void createRandomThreeDigitNum_Test() {
         for (int i = 0; i < 100; i++) {
-            randomThreeDigitNum = Utilities.createRandomThreeDigitNum();
+            randomThreeDigitNum = Random.createRandomThreeDigitNum();
             assertDoesNotThrow(() -> validateComputerNumber(randomThreeDigitNum));
         }
     }

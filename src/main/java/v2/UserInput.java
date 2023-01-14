@@ -15,7 +15,6 @@ public class UserInput {
 
     public static String userRestartInput() {
         System.out.println(Messages.GAME_SUCCESS);
-        System.out.println(Messages.GAME_RESTART);
         String userRestartInput = new Scanner(System.in).next();
         validateUserRestartInput(userRestartInput);
         return userRestartInput;

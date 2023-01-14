@@ -2,10 +2,8 @@ package v2;
 
 public enum Messages {
 
-    GAME_START("숫자 야구 게임을 시작합니다."),
     USER_INPUT("숫자를 입력해 주세요 : "),
-    GAME_SUCCESS("3개의 숫자를 모두 맞히셨습니다! 게임 종료"),
-    GAME_RESTART("게임을 재시작 하시겠습니까? (Y/N)"),
+    GAME_SUCCESS("3개의 숫자를 모두 맞히셨습니다! 게임 종료\n게임을 재시작 하시겠습니까? (Y/N)" ),
 
     ERROR_NUMBER_FORMAT("[ERROR] 입력은 1~9 까지의 숫자 3자리를 입력해야 합니다."),
     ERROR_YN_FORMAT("[ERROR] Y또는 N만 입력 가능합니다."),

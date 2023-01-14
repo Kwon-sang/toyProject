@@ -3,7 +3,7 @@ package v2;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class Utilities {
+public class Random {
 
     public static String createRandomThreeDigitNum() {
         Set<String> duplicateChecker = new LinkedHashSet<>();
