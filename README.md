@@ -58,6 +58,7 @@ Code Link : (https://github.com/Kwon-sang/toyProject/blob/master/src/main/java/v
 
 - ## 2.2 : Refactoring (version 2)
 Code Link : (https://github.com/Kwon-sang/toyProject/tree/master/src/main/java/v2)
+> ---
 > ### 기능의 분리에 관하여
 > 숫자 야구 게임은 어떤 기능과 역할들로 구성되는가?<br/>
 > 확장성 및 유지보수를 위한 코드개선에 앞서, 먼저 단일 책임의 원칙(SRP)에 따라 어떤 책임과 기능들의 집합으로 이루어져 있는지 고민해 볼 수 있을 것이다.<br/>
@@ -68,8 +69,9 @@ Code Link : (https://github.com/Kwon-sang/toyProject/tree/master/src/main/java/v
 > - 컴퓨터와 유저의 숫자를 비교하여 스트라이크 or 볼 개수를 연산하는 기능
 > - 해당 결과를 출력하는 기능
 > 
-> version2 에서는 기능의 집합을 정의하고, 이를 토대로 응집도와 결합도 측면을 고려하여 클래스를 분리하였다.   
+> version2 에서는 기능의 집합을 정의하고, 이를 토대로 응집도와 결합도 측면을 고려하여 클래스를 분리하였다.
 
+> ---
 > ### 클래스의 분리
 > - `Application.java` : 메인 어플리케이션
 > - `Game.java` : 게임 실행 흐름 제어(게임 로직 컨트롤러 혹은 서비스)<br/><br/>
@@ -78,5 +80,6 @@ Code Link : (https://github.com/Kwon-sang/toyProject/tree/master/src/main/java/v
 > - `Random.java` : 3자리 랜덤한 숫자 생성<br/><br/>
 > - `Messages` : 출력 메시지 관리를 위한 Enum
 
+> ---
 > ### Reference Diagram 
 > <p align="center"><img src="src/main/resources/v2RefernceDiagram.png" width="600">
